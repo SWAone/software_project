@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.sp),
                   color: Colors.white),
               child: Row(
-                children: [Text('ادارة العمال')],
+                children: const [Text('ادارة العمال')],
               ),
             )
           ],
