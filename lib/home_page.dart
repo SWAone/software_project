@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
               child: Row(
                 children: [Text('ادارة العمال')],
               ),
-            )
+            ),
           ],
         ),
       ),
