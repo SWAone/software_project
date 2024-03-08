@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -51,24 +52,62 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        blurRadius: 7,
-                        color: Colors.black.withOpacity(0.20),
-                        offset: Offset(0, 2))
-                  ],
-                  borderRadius: BorderRadius.circular(10.sp),
-                  color: Colors.white),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
-                children: const [Text('ادارة العمال')],
+                children: [
+                  _section(
+                    image: 'assets/home_icon/UsersThree.png',
+                    text: 'ادارة العمال',
+                  ),
+                  SizedBox(width: 8.3.w),
+                  _section(
+                    image: 'assets/home_icon/dollar-coin.png',
+                    text: 'الوضع المالي',
+                  ),
+                  SizedBox(width: 8.3.w),
+                  _section(
+                    image: 'assets/home_icon/HandCoins.png',
+                    text: 'الرواتب',
+                  ),
+                  SizedBox(width: 8.3.w),
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),
     ));
+  }
+
+  Container _section({required image, required text}) {
+    return Container(
+      height: 56.h,
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: 1.04.w,
+          color: Color(0xff000000).withOpacity(0.16),
+        ),
+        borderRadius: BorderRadius.circular(10.4),
+        color: Colors.white,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Image.asset(image),
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Widget _myBox(

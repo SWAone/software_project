@@ -9,11 +9,11 @@ GetStorage box = GetStorage();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +30,11 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             builder: (context, child) {
               return MediaQuery(
-                  data: MediaQuery.of(context).copyWith(textScaleFactor: 0.9),
+                  data: MediaQuery.of(context)
+                      .copyWith(textScaler: const TextScaler.linear(0.9)),
                   child: child!);
             },
-            home: HomePage(),
+            home: const HomePage(),
             theme: ThemeData(
                 colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
                 useMaterial3: true,
