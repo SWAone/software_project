@@ -147,7 +147,7 @@ class HomePage extends StatelessWidget {
       Color Textcolor = Colors.white}) {
     return Container(
       width: 189.w,
-      height: 185.h,
+      height: 200.h,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
             blurRadius: 7,
@@ -197,7 +197,6 @@ class HomePage extends StatelessWidget {
         children: [
           Container(
             // alignment: Alignment.center,
-            height: 46.h,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),

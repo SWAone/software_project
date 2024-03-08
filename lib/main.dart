@@ -30,9 +30,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             builder: (context, child) {
               return MediaQuery(
-                  data: MediaQuery.of(context)
-                      .copyWith(textScaler: const TextScaler.linear(0.9)),
-                  child: child!);
+                  data: MediaQuery.of(context).copyWith(), child: child!);
             },
             home: const HomePage(),
             theme: ThemeData(
