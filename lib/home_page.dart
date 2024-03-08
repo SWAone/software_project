@@ -192,33 +192,49 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _laborers() {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Container(
-            // alignment: Alignment.center,
-            height: 46.h,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 9,
-                  color: Colors.black.withOpacity(0.14),
-                )
-              ],
-            ),
-            child: TextField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    Icons.search,
-                  ),
-                  hintText: 'ابحث عن عامل',
-                  border: UnderlineInputBorder(borderSide: BorderSide.none)),
-            ),
+    return Column(
+      children: [
+        Container(
+          // alignment: Alignment.center,
+          height: 46.h,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 9,
+                color: Colors.black.withOpacity(0.14),
+              )
+            ],
           ),
-        ],
-      ),
+          child: TextField(
+            decoration: InputDecoration(
+                prefixIcon: Icon(
+                  Icons.search,
+                ),
+                hintText: 'ابحث عن عامل',
+                border: UnderlineInputBorder(borderSide: BorderSide.none)),
+          ),
+        ),
+        // GridView.builder(
+        //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        //       crossAxisCount: 3, // عدد الأعمدة في الشبكة
+        //       crossAxisSpacing: 10.0, // المسافة بين العناصر في الاتجاه الأفقي
+        //       mainAxisSpacing: 10.0, // المسافة بين العناصر في الاتجاه الرأسي
+        //     ),
+        //     itemCount: 5, // عدد العناصر في الشبكة
+        //     itemBuilder: (BuildContext context, int index) {
+        //       // دالة بناء العناصر
+        //       return Container(
+        //           color: Colors.blueGrey,
+        //           child: Center(
+        //             child: Text(
+        //               'data',
+        //               style: TextStyle(color: Colors.white),
+        //             ),
+        //           ));
+        //     })
+      ],
     );
   }
 }
